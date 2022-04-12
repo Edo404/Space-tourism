@@ -1,4 +1,12 @@
+/* ------------------- */
+/* Custom properties   */
+/* ------------------- */
 
+:root {
+    --clr-dark: 230 35% 7%;
+    --clr-light: 231 77% 90%;
+    --clr-white: 0 0% 100%;
+}
 
 
 /* ------------------- */
@@ -8,7 +16,6 @@
 /* https://piccalil.li/blog/a-modern-css-reset/ */
 
 /* Box sizing */
-
 *,
 *::before,
 *::after {
@@ -16,7 +23,6 @@
 }
 
 /* Reset margins */
-
 body,
 h1,
 h2,
@@ -26,7 +32,7 @@ h5,
 p,
 figure,
 picture {
-    margin: 0;
+    margin: 0; 
 }
 
 /* set up the body */
@@ -37,7 +43,7 @@ body {
 
 /* make images easier to work with */
 img,
-picture {
+picutre {
     max-width: 100%;
     display: block;
 }
@@ -52,19 +58,22 @@ select {
 
 /* remove animations for people who've turned them off */
 @media (prefers-reduced-motion: reduce) {  
-    *,
-    *::before,
-    *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-      scroll-behavior: auto !important;
-    }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
+
 /* ------------------- */
-/* Utility Classes     */
+/* Utility classes     */
 /* ------------------- */
+
+/* general */
 
 .flex {
     display: flex;
@@ -77,31 +86,31 @@ select {
 }
 
 .container {
-    padding: 0 2em;
+    padding-inline: 2em;
     margin-inline: auto;
     max-width: 80rem;
 }
 
 .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap; /* added line */
-    border: 0;
+  position: absolute; 
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px; 
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
 }
 
-.box {
-    background: lightblue;
-    padding: 3rem;
-}
+/* colors */
 
-.call-to-action {
-    --gap: 5rem;
-    background: pink;
-    padding: 2rem;
-    border-radius: 1rem;
-}
+.bg-dark { background-color: hsl( var(--clr-dark) );}
+.bg-accent { background-color: hsl( var(--clr-light) );}
+.bg-white { background-color: hsl( var(--clr-white) );}
+
+.text-dark { color: hsl( var(--clr-dark) );}
+.text-accent { color: hsl( var(--clr-light) );}
+.text-white { color: hsl( var(--clr-white) );}
+
+
